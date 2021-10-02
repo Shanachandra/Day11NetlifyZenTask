@@ -5,10 +5,282 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+        .formtype{
+            border: 1px solid black;
+            width:450px;
+        background-color: lightgray;
+        }
+        .inputtype{
+            margin: 5px;
+            padding: 10px;
+        }
+        .submit{
+            background-color: lightblue;
+            
+        }
+        label{
+                font-size: 10px;
+                
+            }
+            input{
+                font-family: 'Courier New', Courier, monospace;
+            }
+            table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <input type="text" id="countryname">
-    <button onclick="getcoviddetail()">click me!!</button>
-    <script src="script.js"></script>
+    <h2>3.Design a contact us form with all fields as required.</h2>
+    <form action="" class="formtype">
+
+        <div style=" background-color: brown;
+        color: white;
+        margin: 10px;
+        padding: 10px;
+        text-align: center;">Contact form</div>
+        <input type="text" class="inputtype" placeholder="Firstname">
+        <input type="text" class="inputtype" placeholder="Lastname"><br>
+        <input type="email" class="inputtype" placeholder="Your Email"><br>
+        <input type="text" class="inputtype" placeholder="Phone No"><br>
+        <input type="submit" class="submit inputtype" value="Submit your form">
+        
+        
+
+    </form>
+    <h2>4.Use certain HTML elements to display the following in a HTML page.</h2>
+    <section>
+        <ul>
+            <li>Programming Language
+               <ol style="list-style-type: circle;"><li>Javascript
+                   <ol type="a">
+                       <li>Angular</li>
+                       <li>React</li>
+                       <li>vue.js</li>
+                   </ol>
+               </li>
+               <li>Python
+                <ol type="a">
+                    <li>Django Framework</li>
+                    <li>Flask Framework</li>
+                    
+                </ol>
+            </li>
+            <li>Java
+                <ol type="a">
+                    <li>Spring</li>
+                    <li>Maven</li>
+                    <li>Hibernate</li>
+                </ol>
+            </li>
+            </ol>
+            </li>
+            <li>Database
+                <ol style="list-style-type: circle;"><li>MySQL</li>
+                <li>MongoDB</li>
+            <li>Casandra</li>
+        </ol>
+            </li>
+        </ul>
+    </section>
+    <br>
+    <h2>5.Create an element that helps you to open the https://google.com in separate new tab.</h2>
+    
+        <div>
+<a href="https://google.com" target="_blank"> Google</a>
+</div>
+<br>
+<h2>6.In the form, add two radio buttons with grouping them for employee type(Salaried and own business)</h2>
+<form action="">
+    <label for="">Salaried</label>
+<input type="radio" name="employee" id="">
+<label for="">Own Business</label>
+<input type="radio" name="employee" id="">
+</form>
+<br>
+<h2>7.Design form shown in the link (http://evc-cit.info/cit040/formguide/card_0.png)</h2>
+<form action="" style="border: 1px solid black; padding: 10px; width: 400px; margin: 100px; margin-left: 400px;">
+    <div style="padding: 10px;  background-color: red; color: white; font-weight: bold;">Yes! i want to subscribe to Mag-O-Zine</div>
+<input type="text" name="" id="" value="Joe" style="border: none; border-bottom: 1px solid black; width: 100px; text-align: center; font-style: italic;">
+<input type="text" name="" id=""  value="Samgeorge" style="border: none; border-bottom: 1px solid black; width: 100px; font-style: italic; text-align: center;">
+<br><label for="" >First Name</label>
+<label style="margin: 60px;" for="">Last Name</label><br>
+<input type="text" name="" id="" value="100 Washington street" style="border: none; border-bottom: 1px solid black; width: 300px; text-align: center; font-style: italic;">
+<br><label for="">Address</label>
+<br>  <input type="text" name="" id="" value="Ampgous" style="border: none; border-bottom: 1px solid black; width: 100px; text-align: center; font-style: italic;">
+<input type="text" name="" id=""  value="CA" style="border: none; border-bottom: 1px solid black; width: 100px; font-style: italic; text-align: center;">
+<input type="text" name="" id=""  value="999999" style="border: none; border-bottom: 1px solid black; width: 100px; font-style: italic; text-align: center;">   
+<br><label for="">City</label>
+<label style="margin: 90px;" for="">State</label>
+<label  for="">Zip</label>
+<br>
+<label for="" style="font-weight: bold; font-size: 12px;">Subscribe for:</label>
+<input type="checkbox" name="years" id="">
+<label for="" style="font-weight: bold; font-size: 12px;">1 year ($19.95)</label>
+<input type="checkbox" name="years" id="">
+<label for="" style="font-weight: bold; font-size: 12px;">2 years($35.00)</label>
+<br><br>
+<label for="" style="font-weight: bold; font-size: 12px;">Sent me more information about</label>
+<br>
+<input type="checkbox" name="years" id="">
+<label for="" style="font-weight: bold; font-size: 12px;">Computer-Zine</label><br>
+<input type="checkbox" name="years" id="">
+<label for="" style="font-weight: bold; font-size: 12px;">Fishing-Zine</label><br>
+<input type="checkbox" name="years" id="">
+<label for="" style="font-weight: bold; font-size: 12px;">Cat-O-Zine</label>
+
+</form>
+<br>
+<h2>8.Use the table tag to design given image Click here.</h2>
+<table>
+    <thead>
+        <tr>
+            <td rowspan="2">State of Health</td>
+            <td colspan="2">Fasting Value</td>
+            <td>After Eating</td>
+
+        </tr>
+        <tr><td>Minimum</td>
+            <td>Maximum</td>
+            <td>2hours after eating</td>
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr>
+            <td>Healthy</td>
+            <td>70</td>
+            <td>100</td>
+            <td>Less than 140</td>
+        </tr>
+        <tr>
+            <td>Pre-Diabetes</td>
+            <td>101</td>
+            <td>126</td>
+            <td>140 to 200</td>
+        </tr>
+        <tr>
+            <td>Diabetes</td>
+            <td>More than 126</td>
+            <td>NA</td>
+            <td>More than 200</td>
+        </tr>
+        
+    </tbody>
+</table>
+<br>
+<h2>10.In your, HTML page add the below line and Highlight it without using any CSS.
+    "HTML & CSS is awesome"</h2>
+    <p><i><strong>HTML & CSS is Awesome</strong></i></p> 
+
+    <br>
+    <h2>11.Create an HTML page, which should contain all types of input elements.</h2>
+    <form action="">
+        <div>
+        <label for="">Button element</label><br>
+        <input type="button" value="click me!!">
+        </div>
+        <br>
+<div>
+
+<label for="">Checkbox element</label><br>
+<input type="checkbox" id="scale" name="scale" checked>
+<label for="">Scales</label>
+</div>
+<div>
+    <input type="checkbox" id="horns" name="horns">
+    <label for="horns">Horns</label>
+  </div>
+  <br>
+  <div>
+      <label for="">color element</label><br>
+    <input type="color" id="body" name="body"
+            value="#f6b73c">
+    <label for="body">Body</label>
+</div>
+<br>
+<div>
+    <label for="start">Date element:</label>
+<br>
+<input type="date" id="start" name="trip-start"
+       value="2018-07-22"
+       min="2018-01-01" max="2018-12-31">
+</div>
+<br>
+<div>
+    <label for="email">Email element:</label>
+<br>
+<input type="email" id="email"
+       pattern=".+@globex\.com" size="30" required>
+
+</div>
+<br>
+
+<div>
+    <label for="avatar">Choose a profile picture:</label><br>
+
+<input type="file"
+       id="avatar" name="avatar"
+       accept="image/png, image/jpeg">
+
+</div>
+<br>
+<label for="">Password button:</label>
+<div>
+    <label for="pass">Password (8 characters minimum):</label>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+</div>
+<br>
+<label for="">Radio button:</label>
+<div>
+    <input type="radio" id="huey" name="drone" value="huey"
+           checked>
+    <label for="huey">Huey</label>
+  </div>
+  
+  <div>
+    <input type="radio" id="dewey" name="drone" value="dewey">
+    <label for="dewey">Dewey</label>
+  </div>
+  
+  <div>
+    <input type="radio" id="louie" name="drone" value="louie">
+    <label for="louie">Louie</label>
+  </div>
+
+  <br>
+  <label for="">Range</label>
+  <div>
+    <input type="range" id="volume" name="volume"
+           min="0" max="11">
+    <label for="volume">Volume</label>
+  </div>
+  <br>
+  <label for="site-search">Search the site:</label><br>
+<input type="search" id="site-search" name="q"
+       aria-label="Search through site content">
+
+<button>Search</button>
+<br>
+<br>
+<label for="">Submit Button</label> <br>
+<input type="submit" name="" id="">
+  <br>
+  <br>
+  <div>
+    <label for="name">Text (4 to 8 characters):</label>
+<br>
+    <input type="text" id="name" name="name" required
+           minlength="4" maxlength="8" size="10">
+  </div>
+    </form>
 </body>
 </html>

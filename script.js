@@ -98,21 +98,96 @@
 
 
 
-async function getcoviddetail()
-{
-let input=document.getElementById('countryname').value;    
-let getcoviddata=await fetch(`https://api.covid19api.com/total/dayone/country/${input}`)
-let jsondata=await getcoviddata.json();
-console.log(jsondata)
-var count=0;
-for(var data in jsondata)
-{
-    count=count+1;
-    console.log(
-    `Day ${count}:
-    Active Cases:${jsondata[data].Active} 
-    Recoverd Cases:${jsondata[data].Recovered}
-    Death Cases:${jsondata[data].Deaths}
-    Confirmed Cases:${jsondata[data].Confirmed}`)
+// async function getcoviddetail()
+// {
+//     try{
+// let input=document.getElementById('countryname').value;    
+// let getcoviddata=await fetch(`https://api.covid19api.com/total/dayone/country/${input}`)
+// let jsondata=await getcoviddata.json();
+// console.log(jsondata)
+// var count=0;
+// for(var data in jsondata)
+// {
+//     count=count+1;
+//     console.log(
+//     `Day ${count}:
+//     Active Cases:${jsondata[data].Active} 
+//     Recoverd Cases:${jsondata[data].Recovered}
+//     Death Cases:${jsondata[data].Deaths}
+//     Confirmed Cases:${jsondata[data].Confirmed}`)
+// }
+//     }
+//     catch(error){
+//         console.log("something went wrong")
+//     }
+// }
+
+
+let xhr=new XMLHttpRequest();
+xhr.open('GET','https://restcountries.com/v2/all',true)
+xhr.send()
+xhr.onload=(()=>{
+var data=xhr.response;
+data=JSON.parse(data)
+
+//a.Get all the countries from Asia continent /region using Filter function
+
+var result=data.filter((newval)=>{
+    if(newval.region=="Asia")
+    {          
+       return true
+    }
+})
+console.log('a.Get all the countries from Asia continent /region using Filter function')
+console.log(result)
+
+
+//b.Get all the countries with a population of less than 2 lakhs using Filter function
+
+var population=data.filter((newval)=>{
+if(newval.population<200000)
+{    
+    return true
 }
-}
+
+})
+console.log('b.Get all the countries with a population of less than 2 lakhs using Filter function')
+console.log(population)
+
+//c.Print the following details name, capital, flag using forEach function
+var arr=[]
+data.forEach(element => {
+    var obj=new Object();
+    obj.name=element.name;
+    obj.capital=element.capital;
+    obj.flag=element.flag;
+    arr.push(obj)
+    
+});
+console.log(arr)
+
+//d.Print the total population of countries using reduce function
+var i=0;
+var res=data.reduce((acc,currentValue) =>{
+
+    let cv=data[i].population
+    i=i+1
+    return parseInt(acc) +parseInt(cv)
+    
+  },0)
+console.log(res)
+
+//e.Print the country which uses US Dollars as currency.
+
+var response=data.filter((element)=>{
+    
+    for(var i in element.currencies)
+    {
+        if(element.currencies[i].symbol=='$')
+        {
+            console.log(element)
+        }
+    }
+})
+
+})
